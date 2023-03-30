@@ -1,5 +1,16 @@
 
 
+no terminal:
+   npx react-native init TicTacToe
+
+   npx react-native run-android
+   npm start
+
+
+
+
+
+
 
 
 
