@@ -1,25 +1,42 @@
 
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React, { useState } from 'react'
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native'
 
 
 
 
-function App() {
+const App = () => {
+   const [active_player, setActive_player] = useState('X')
   
    return (
-      <View style={styles.container} >
-         <Text>Tic Tac Toe</Text>
-      </View>
+      <SafeAreaView style={styles.body} >
+         <View style={styles.playerInfo} >
+            <Text style={styles.playerTxt} >Player {active_player}'s turn</Text>
+
+         </View>
+      </SafeAreaView>
    )
 }
 
 const styles = StyleSheet.create({
-   container: {
-
+   body: {
+      flex: 1,
+      backgroundColor: '#fff'
+   },
+   playerInfo: {
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center'
+   },
+   playerTxt: {
+      fontSize: 20,
+      fontWeight: '700',
+      letterSpacing: 1.2
    }
 
 
 })
 
 export default App
+
+
