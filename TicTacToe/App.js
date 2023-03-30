@@ -6,7 +6,7 @@ import { View, Text, StyleSheet, SafeAreaView } from 'react-native'
 
 
 const App = () => {
-   const [active_player, setActive_player] = useState('X')
+   const [active_player, setActive_player] = useState('O')
   
    return (
       <SafeAreaView style={styles.body} >
