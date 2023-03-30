@@ -10,7 +10,7 @@ const App = () => {
   
    return (
       <SafeAreaView style={styles.body} >
-         <View style={styles.playerInfo} >
+         <View style={[styles.playerInfo, {backgroundColor: active_player === 'X' ? '#007FF4': '#F40075'}]} >
             <Text style={styles.playerTxt} >Player {active_player}'s turn</Text>
 
          </View>
