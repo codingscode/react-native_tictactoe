@@ -17,6 +17,30 @@ const App = () => {
             <Pressable style={styles.cell} >
                <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
             </Pressable>
+            <Pressable style={styles.cell} >
+               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+            </Pressable>
+            <Pressable style={styles.cell} >
+               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+            </Pressable>
+            <Pressable style={styles.cell} >
+               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+            </Pressable>
+            <Pressable style={styles.cell} >
+               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+            </Pressable>
+            <Pressable style={styles.cell} >
+               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+            </Pressable>
+            <Pressable style={styles.cell} >
+               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+            </Pressable>
+            <Pressable style={styles.cell} >
+               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+            </Pressable>
+            <Pressable style={styles.cell} >
+               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+            </Pressable>
          </View>
       </SafeAreaView>
    )
@@ -42,14 +66,23 @@ const styles = StyleSheet.create({
       color: '#fff'
    },
    mainContainer: {
-   
+      flexDirection: 'row',
+      justifyContent: 'center',
+      flexWrap: 'wrap'
    },
    cell: {
-   
+      width: 100,
+      height: 100,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderWidth: 6
    },
    icon: {
-   
+      width: 62,
+      height: 62
    }
+   
 
 
 })
