@@ -18,7 +18,7 @@ const App = () => {
          <View style={styles.mainContainer} >
             {/* Top Left Cell */}
             <Pressable style={styles.cell_top_left} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               <Image source= {require('./assets/image/zero.png')} style={styles.icon} />
             </Pressable>
             {/* Top Mid Cell */}
             <Pressable style={styles.cell_top_mid} >
@@ -34,7 +34,7 @@ const App = () => {
             </Pressable>
             {/* Mid Mid Cell */}
             <Pressable style={styles.cell_mid_mid} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               <Image source= {require('./assets/image/zero.png')} style={styles.icon} />
             </Pressable>
             {/* Mid Right Cell */}
             <Pressable style={styles.cell_mid_right} >
@@ -50,11 +50,11 @@ const App = () => {
             </Pressable>
             {/* Bottom Right Cell */}
             <Pressable style={styles.cell_bottom_right} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               <Image source= {require('./assets/image/zero.png')} style={styles.icon} />
             </Pressable>
          </View>
-         <Pressable>
-            <Image source={require('./assets/image/replay.png')} />
+         <Pressable style={styles.cancelBTN} >
+            <Image source={require('./assets/image/replay.png')} style={styles.cancelIcon} />
          </Pressable>
       </SafeAreaView>
    )
@@ -163,9 +163,16 @@ const styles = StyleSheet.create({
    icon: {
       width: 62,
       height: 62
+   },
+   cancelIcon: {
+      height: 80,
+      width: 80
+   },
+   cancelBTN: {
+      position: 'absolute',
+      bottom: 20,
+      right: 20
    }
-   
-
 
 })
 
