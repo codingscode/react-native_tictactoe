@@ -12,6 +12,8 @@ no app clicar no 1º quadrado para ver as mudanças de letra e cor texto
 
 fazer em todos os quadrados
 
+clicando no botão replay as marcações somem
+
 
 
 

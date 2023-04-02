@@ -37,6 +37,14 @@ const App = () => {
       
    }
   
+   const resetMarkers = () => {
+      setMarkers([null, null, null, null, null, null, null, null, null])
+
+      
+   
+   }
+   
+
    return (
       <SafeAreaView style={styles.body} >
          <View style={[styles.playerInfo, {backgroundColor: active_player === 'X' ? '#007FF4': '#F40075'}]} >
@@ -89,7 +97,7 @@ const App = () => {
                { markers[8] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
          </View>
-         <Pressable style={styles.cancelBTN} >
+         <Pressable style={styles.cancelBTN} onPress={resetMarkers} >
             <Image source= {require('./assets/image/replay.png')} style={styles.cancelIcon} />
          </Pressable>
       </SafeAreaView>
