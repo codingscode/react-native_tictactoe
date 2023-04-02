@@ -10,7 +10,7 @@ no terminal:
 
 no app clicar no 1º quadrado para ver as mudanças de letra e cor texto
 
-
+fazer em todos os quadrados
 
 
 
