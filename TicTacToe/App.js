@@ -9,6 +9,27 @@ const windowWidth = Dimensions.get('window').width
 
 const App = () => {
    const [active_player, setActive_player] = useState('X')
+   const [markers, setMarkers] = useState([
+      null, null, null,
+      null, null, null,
+      null, null, null
+   ])
+
+   const markPosition = (position) => {
+      let temp = [...markers]
+      temp[position] = active_player
+      
+      setMarkers(temp)
+      
+      if (active_player === 'X') { // transfer chances to next player
+         setActive_player('O')
+      }
+      else {
+         setActive_player('X')
+      }
+      
+      
+   }
   
    return (
       <SafeAreaView style={styles.body} >
@@ -17,44 +38,54 @@ const App = () => {
          </View>
          <View style={styles.mainContainer} >
             {/* Top Left Cell */}
-            <Pressable style={styles.cell_top_left} >
-               <Image source= {require('./assets/image/zero.png')} style={styles.icon} />
+            <Pressable style={styles.cell_top_left} onPress={() => markPosition(0)} >
+               { markers[0] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[0] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
             {/* Top Mid Cell */}
             <Pressable style={styles.cell_top_mid} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               { markers[1] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[1] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
             {/* Top Right Cell */}
             <Pressable style={styles.cell_top_right} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               { markers[2] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[2] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
             {/* Mid Left Cell */}
             <Pressable style={styles.cell_mid_left} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               { markers[3] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[3] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
             {/* Mid Mid Cell */}
             <Pressable style={styles.cell_mid_mid} >
-               <Image source= {require('./assets/image/zero.png')} style={styles.icon} />
+               { markers[4] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[4] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
             {/* Mid Right Cell */}
             <Pressable style={styles.cell_mid_right} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               { markers[5] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[5] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
             {/* Bottom Left Cell */}
             <Pressable style={styles.cell_bottom_left} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               { markers[6] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[6] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
             {/* Bottom Mid Cell */}
             <Pressable style={styles.cell_bottom_mid} >
-               <Image source= {require('./assets/image/cross.png')} style={styles.icon} />
+               { markers[7] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[7] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
             {/* Bottom Right Cell */}
             <Pressable style={styles.cell_bottom_right} >
-               <Image source= {require('./assets/image/zero.png')} style={styles.icon} />
+               { markers[8] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+               { markers[8] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
             </Pressable>
          </View>
          <Pressable style={styles.cancelBTN} >
-            <Image source={require('./assets/image/replay.png')} style={styles.cancelIcon} />
+            { markers[9] === 'X' && <Image source= {require('./assets/image/cross.png')} style={styles.icon} />}
+            { markers[9] === 'O' && <Image source= {require('./assets/image/zero.png')} style={styles.icon} />}
          </Pressable>
       </SafeAreaView>
    )
