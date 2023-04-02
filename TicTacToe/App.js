@@ -69,9 +69,11 @@ const App = () => {
       
       if (winner === 'X') {
          alert('PLayer X Won!')
+         resetMarkers()
       }
       else if (winner === 'O') {
          alert('PLayer O Won!')
+         resetMarkers()
       }
    }, [markers])
 
