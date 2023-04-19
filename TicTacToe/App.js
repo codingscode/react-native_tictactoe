@@ -30,10 +30,6 @@ const App = () => {
             setActive_player('X')
          }
       }
-
-      
-      
-      
       
    }
   
